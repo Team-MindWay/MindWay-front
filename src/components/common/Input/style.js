@@ -11,6 +11,12 @@ export const Input = styled.input`
   border-radius: 10px;
 
   padding-left: 20px;
-  font-size: 20px;
+  font-size: 18px;
   outline: none;
+`;
+
+export const ErrorMessage = styled.p`
+  color: #e53a3a;
+  margin-top: 7px;
+  font-size: 12px;
 `;

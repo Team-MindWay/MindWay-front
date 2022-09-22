@@ -1,5 +1,11 @@
+import { BookRegister } from '../../components';
+
 const BookRegisterPage = () => {
-  return <div>asd</div>;
+  return (
+    <>
+      <BookRegister />
+    </>
+  );
 };
 
 export default BookRegisterPage;

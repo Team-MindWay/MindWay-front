@@ -7,7 +7,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 95px;
+  padding: 0 4.6vw;
 `;
 
 export const NavBox = styled.nav`
@@ -26,4 +26,10 @@ export const NavContent = styled.a`
   :hover {
     color: #aad1a0;
   }
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 197px;
 `;

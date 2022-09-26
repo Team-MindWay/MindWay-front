@@ -23,7 +23,9 @@ const Header = () => {
           프로젝트
         </S.NavContent>
       </S.NavBox>
-      <I.UserIcon />
+      <S.IconWrapper>
+        <I.UserIcon />
+      </S.IconWrapper>
     </S.Header>
   );
 };

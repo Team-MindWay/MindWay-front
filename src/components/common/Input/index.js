@@ -14,7 +14,7 @@ const Input = ({ bigwidth = false, placeholder, register, error }) => {
         placeholder={placeholder}
         {...register}
         css={css`
-          width: ${bigwidth ? '500px' : '400px'};
+          width: ${bigwidth ? '528px' : '400px'};
           border: ${error && ' 2px solid #E53A3A;'};
         `}
       />

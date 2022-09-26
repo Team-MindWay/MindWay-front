@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
+`;
+
+export const RegisterSection = styled.div`
   width: 528px;
   margin: 0 auto;
 `;
@@ -66,10 +70,27 @@ export const RegisterButton = styled.button`
   background-color: #ffffff;
   border: 2px solid #aad1a0;
   border-radius: 50px;
-
-  font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
   color: #6e8f66;
   cursor: pointer;
+
+  &:hover {
+    background: #6e8f66;
+    border: 2px solid #6e8f66;
+    border-radius: 50px;
+    color: #ffffff;
+  }
+`;
+
+export const LineSection = styled.div``;
+
+export const Line = styled.div`
+  top: 0;
+  left: 35%;
+  position: absolute;
+  width: 2px;
+  height: 633px;
+
+  background: #6e8f66;
+  border-radius: 4px;
 `;

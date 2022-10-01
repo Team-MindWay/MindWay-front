@@ -54,6 +54,18 @@ export const InputSection = styled.div`
 export const Title = styled.h1`
   font-size: 24px;
   margin-bottom: 12px;
+
+  &::before {
+    display: inline-block;
+    background-size: 10px 10px;
+    width: 20px;
+    height: 20px;
+    content: '';
+    position: absolute;
+    right: 66.5vw;
+    background-color: #6e8f66;
+    border-radius: 50%;
+  }
 `;
 
 export const ErrorMessage = styled.p`
@@ -86,10 +98,10 @@ export const LineSection = styled.div``;
 
 export const Line = styled.div`
   top: 0;
-  left: 35%;
+  left: 33vw;
   position: absolute;
   width: 2px;
-  height: 633px;
+  height: 620px;
 
   background: #6e8f66;
   border-radius: 4px;

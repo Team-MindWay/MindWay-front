@@ -13,10 +13,15 @@ export const Input = styled.input`
   padding-left: 20px;
   font-size: 18px;
   outline: none;
+
+  &:focus {
+    border: 2px solid #6f8e67;
+  }
 `;
 
 export const ErrorMessage = styled.p`
   color: #e53a3a;
   margin-top: 7px;
   font-size: 12px;
+  position: absolute;
 `;

@@ -21,8 +21,8 @@ const BookRegister = () => {
 
   return (
     <>
+      <Header />
       <S.Container>
-        <Header />
         <S.RegisterSection>
           <S.TitleSection>
             <div>
@@ -41,7 +41,7 @@ const BookRegister = () => {
           <S.Form onSubmit={handleSubmit(handleRegister, handleError)}>
             <S.InputSection>
               <div>
-                <S.Title>책 제목</S.Title>
+                <S.FormTitle>책 제목</S.FormTitle>
                 <Input
                   bigwidth={true}
                   placeholder="책 제목을 입력해주세요."
@@ -52,7 +52,7 @@ const BookRegister = () => {
                 />
               </div>
               <div>
-                <S.Title>저자</S.Title>
+                <S.FormTitle>저자</S.FormTitle>
                 <Input
                   bigwidth={true}
                   placeholder="저자를 입력해주세요."
@@ -63,7 +63,7 @@ const BookRegister = () => {
                 />
               </div>
               <div>
-                <S.Title>링크</S.Title>
+                <S.FormTitle>링크</S.FormTitle>
                 <Input
                   bigwidth={true}
                   placeholder="YES24 링크를 첨부해주세요."
@@ -76,10 +76,8 @@ const BookRegister = () => {
             </S.InputSection>
             <S.RegisterButton>신청하기</S.RegisterButton>
           </S.Form>
-          <S.LineSection>
-            <S.Line />
-          </S.LineSection>
         </S.RegisterSection>
+        <S.Line />
       </S.Container>
     </>
   );

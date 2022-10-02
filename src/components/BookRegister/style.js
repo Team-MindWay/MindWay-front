@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  width: 688px;
+  margin: 0 auto;
 `;
 
 export const RegisterSection = styled.div`
-  width: 528px;
+  width: 548px;
   margin: 0 auto;
 `;
 
@@ -26,7 +25,7 @@ export const Desc = styled.p`
 export const Link = styled.a`
   width: 160px;
   height: 44px;
-  background-color: #ffffff;
+  background-color-color: #ffffff;
   border: 2px solid #618259;
   border-radius: 50px;
 
@@ -51,20 +50,21 @@ export const InputSection = styled.div`
   height: 437px;
 `;
 
-export const Title = styled.h1`
+export const FormTitle = styled.h1`
+  position: relative;
   font-size: 24px;
   margin-bottom: 12px;
 
-  &::before {
+  &::after {
     display: inline-block;
-    background-size: 10px 10px;
+    background-color-size: 10px 10px;
     width: 20px;
     height: 20px;
     content: '';
     position: absolute;
-    right: 66.5vw;
-    background-color: #6e8f66;
+    background-color-color: #6e8f66;
     border-radius: 50%;
+    left: -79px;
   }
 `;
 
@@ -79,7 +79,7 @@ export const RegisterButton = styled.button`
   margin-left: auto;
   width: 160px;
   height: 44px;
-  background-color: #ffffff;
+  background-color-color: #ffffff;
   border: 2px solid #aad1a0;
   border-radius: 50px;
   font-size: 18px;
@@ -87,22 +87,19 @@ export const RegisterButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: #6e8f66;
+    background-color: #6e8f66;
     border: 2px solid #6e8f66;
     border-radius: 50px;
     color: #ffffff;
   }
 `;
 
-export const LineSection = styled.div``;
-
 export const Line = styled.div`
-  top: 0;
-  left: 33vw;
   position: absolute;
+  top: 0;
   width: 2px;
   height: 620px;
 
-  background: #6e8f66;
+  background-color: #6e8f66;
   border-radius: 4px;
 `;

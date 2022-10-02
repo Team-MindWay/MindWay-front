@@ -1,4 +1,4 @@
-import { BookRegister } from '../../components';
+import { BookRegister } from 'components';
 
 const BookRegisterPage = () => {
   return (

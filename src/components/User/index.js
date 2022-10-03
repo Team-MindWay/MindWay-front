@@ -1,5 +1,4 @@
-import { Header } from 'components';
-import UserBook from 'components/UserBook';
+import { Header, UserBook } from 'components';
 import * as S from './style';
 
 const User = () => {

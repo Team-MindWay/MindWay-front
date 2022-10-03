@@ -1,20 +1,31 @@
 import * as S from './style';
 import * as I from 'assets/svg';
-import { useState } from 'react';
-import { UserMenuModal } from 'components';
+import { UserMenuModal, BookDeleteModal } from 'components';
+import { useRecoilState } from 'recoil';
+import { UserMenuModalId, ShowBookDeleteModal, ShowUserMenuModal } from 'atoms';
 
 const UserBook = ({ book, id }) => {
-  const [showModal, setShowModal] = useState();
-  console.log(id);
+  const [userMenuModalId, setUserMenuModalId] = useRecoilState(UserMenuModalId);
+  const [showBookDeleteModal, setShowBookDeleteModal] =
+    useRecoilState(ShowBookDeleteModal);
+  const [showUserMenuModal, setShowUserMenuModal] =
+    useRecoilState(ShowUserMenuModal);
+
+  const handleUserMenuModal = () => {
+    setShowUserMenuModal(!showUserMenuModal);
+    setUserMenuModalId(id);
+  };
+
   return (
     <S.UserBookSection>
       <S.Title>{book.title}</S.Title>
       <S.Author>{book.author}</S.Author>
       <S.Link>{book.link}</S.Link>
-      <S.MenuWrapper onClick={() => setShowModal(!showModal)}>
+      <S.MenuWrapper onClick={handleUserMenuModal}>
         <I.MeatballsMenu />
       </S.MenuWrapper>
-      {showModal && <UserMenuModal />}
+      {userMenuModalId === id && showUserMenuModal && <UserMenuModal />}
+      {userMenuModalId === id && showBookDeleteModal && <BookDeleteModal />}
     </S.UserBookSection>
   );
 };

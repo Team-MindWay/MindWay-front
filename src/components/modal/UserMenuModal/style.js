@@ -22,6 +22,9 @@ export const UserMenuModal = styled.div`
 
 export const Delete = styled.div`
   color: #e53a3a;
+  cursor: pointer;
 `;
 
-export const Update = styled.div``;
+export const Update = styled.div`
+  cursor: pointer;
+`;

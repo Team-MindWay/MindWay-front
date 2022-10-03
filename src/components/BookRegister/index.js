@@ -10,6 +10,7 @@ const BookRegister = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
 
@@ -30,8 +31,15 @@ const BookRegister = () => {
     console.log(errors);
   };
 
-  useEffect(() => {
+  const getDefaultValue = () => {
     id && console.log('book id api 호출');
+    id && setValue('book', '불편한 편의점 2');
+    id && setValue('author', '김호연');
+    id && setValue('link', 'http://www.yes24.com/Product/Goods/111088149');
+  };
+
+  useEffect(() => {
+    id && getDefaultValue();
   }, []);
 
   return (
@@ -41,7 +49,7 @@ const BookRegister = () => {
         <S.RegisterSection>
           <S.TitleSection>
             <div>
-              <Title sub="new" main={id ? '도서 수정' : '도서 신청'} />
+              <Title sub="new" main={id ? '도서 신청 수정' : '도서 신청 '} />
               <S.Desc>
                 신청 전에 도서관에 신청하고자 하는 책이 있는지 확인해주세요.
                 <br />

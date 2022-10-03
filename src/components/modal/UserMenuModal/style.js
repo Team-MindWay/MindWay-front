@@ -1,4 +1,27 @@
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const flipOver = keyframes`
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  100% {
+    transform: perspective(400px);
+  }
+`;
 
 export const UserMenuModal = styled.div`
   position: absolute;
@@ -18,6 +41,8 @@ export const UserMenuModal = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  animation: 0.4s ${flipOver} ease-in-out;
 `;
 
 export const Delete = styled.div`

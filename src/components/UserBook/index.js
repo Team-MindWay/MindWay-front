@@ -12,6 +12,12 @@ const UserBook = ({ book, id }) => {
     useRecoilState(ShowUserMenuModal);
 
   const handleUserMenuModal = () => {
+    // 다른 id에서 모달이 열려있는 상태에서 또 다른 id 모달을 클릭했을 때
+    if (showUserMenuModal === true && id !== userMenuModalId) {
+      // 바로 선택한 모달이 열리게
+      setUserMenuModalId(id);
+      return;
+    }
     setShowUserMenuModal(!showUserMenuModal);
     setUserMenuModalId(id);
   };

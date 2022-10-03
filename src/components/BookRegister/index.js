@@ -2,21 +2,37 @@ import * as S from './style';
 import * as I from 'assets/svg';
 import { Header, Title, Input } from 'components';
 import { useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const BookRegister = () => {
+  const { id } = useParams();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const handleRegister = data => {
+  const handleUpdate = () => {
+    console.log('두서 수정 api 호출');
+  };
+
+  const handleRegister = () => {
+    console.log('도서 신청 api 호출');
+  };
+
+  const handleSubmitData = data => {
     console.log(data);
+    id ? handleUpdate() : handleRegister();
   };
 
   const handleError = errors => {
     console.log(errors);
   };
+
+  useEffect(() => {
+    id && console.log('book id api 호출');
+  }, []);
 
   return (
     <>
@@ -25,7 +41,7 @@ const BookRegister = () => {
         <S.RegisterSection>
           <S.TitleSection>
             <div>
-              <Title sub="new" main="도서 신청" />
+              <Title sub="new" main={id ? '도서 수정' : '도서 신청'} />
               <S.Desc>
                 신청 전에 도서관에 신청하고자 하는 책이 있는지 확인해주세요.
                 <br />
@@ -37,7 +53,7 @@ const BookRegister = () => {
               신청현황 <I.Arrow />
             </S.Link>
           </S.TitleSection>
-          <S.Form onSubmit={handleSubmit(handleRegister, handleError)}>
+          <S.Form onSubmit={handleSubmit(handleSubmitData, handleError)}>
             <S.InputSection>
               <div>
                 <S.FormTitle>책 제목</S.FormTitle>
@@ -73,7 +89,7 @@ const BookRegister = () => {
                 />
               </div>
             </S.InputSection>
-            <S.RegisterButton>신청하기</S.RegisterButton>
+            <S.RegisterButton> {id ? '수정하기' : '신청하기'}</S.RegisterButton>
           </S.Form>
         </S.RegisterSection>
         <S.Line />

@@ -1,1 +1,1 @@
-export { UserModalId } from './AtomContainer';
+export { UserMenuModalId } from './AtomContainer';

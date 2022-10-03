@@ -1,6 +1,6 @@
 import { atom } from 'recoil';
 
-export const UserModalId = atom({
-  key: 'UserModalId',
+export const UserMenuModalId = atom({
+  key: 'UserMenuModalId',
   default: null,
 });

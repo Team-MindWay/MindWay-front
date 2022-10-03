@@ -66,7 +66,7 @@ const User = () => {
           </S.BookInfoHeader>
           <S.UserBookSection>
             {Books.map((book, i) => (
-              <UserBook book={book} key={i} />
+              <UserBook book={book} key={i} id={i} />
             ))}
           </S.UserBookSection>
         </S.BookInfosection>

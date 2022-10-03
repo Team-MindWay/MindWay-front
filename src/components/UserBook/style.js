@@ -24,3 +24,7 @@ export const Link = styled.p`
   font-size: 18px;
   color: #8f8f8f;
 `;
+
+export const MenuWrapper = styled.div`
+  cursor: pointer;
+`;

@@ -1,7 +1,6 @@
 import * as S from './style';
 import * as I from 'assets/svg';
-import { Header, Title } from 'components';
-import Input from 'components/common/Input';
+import { Header, Title, Input } from 'components';
 import { useForm } from 'react-hook-form';
 
 const BookRegister = () => {

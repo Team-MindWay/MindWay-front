@@ -1,9 +1,8 @@
-import { UserMenuModalId, ShowBookDeleteModal } from 'atoms';
+import { ShowBookDeleteModal } from 'atoms';
 import { useRecoilState } from 'recoil';
 import * as S from './style';
 
-const BookDeleteModal = () => {
-  const [userMenuModalId, setUserMenuModalId] = useRecoilState(UserMenuModalId);
+const BookDeleteModal = ({ title, id }) => {
   const [showBookDeleteModal, setShowBookDeleteModal] =
     useRecoilState(ShowBookDeleteModal);
 
@@ -16,7 +15,7 @@ const BookDeleteModal = () => {
     <S.Background>
       <S.BookDeleteModal>
         <S.Question>신청하신 도서를 삭제하시겠습니까?</S.Question>
-        <S.BookName>세상의 마지막 기차역</S.BookName>
+        <S.BookName>{title}</S.BookName>
         <S.ButtonBox>
           <S.Cancle
             onClick={() => setShowBookDeleteModal(!showBookDeleteModal)}

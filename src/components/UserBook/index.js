@@ -1,25 +1,24 @@
 import * as S from './style';
 import * as I from 'assets/svg';
-import { UserMenuModal, BookDeleteModal } from 'components';
 import { useRecoilState } from 'recoil';
-import { UserMenuModalId, ShowBookDeleteModal, ShowUserMenuModal } from 'atoms';
+import { BookDeleteId, ShowBookDeleteModal } from 'atoms';
+import { useNavigate } from 'react-router-dom';
+import { BookDeleteModal } from 'components';
 
 const UserBook = ({ book, id }) => {
-  const [userMenuModalId, setUserMenuModalId] = useRecoilState(UserMenuModalId);
   const [showBookDeleteModal, setShowBookDeleteModal] =
     useRecoilState(ShowBookDeleteModal);
-  const [showUserMenuModal, setShowUserMenuModal] =
-    useRecoilState(ShowUserMenuModal);
+  const [bookDeleteId, setBookDeleteId] = useRecoilState(BookDeleteId);
 
-  const handleUserMenuModal = () => {
-    // 다른 id에서 모달이 열려있는 상태에서 또 다른 id 모달을 클릭했을 때
-    if (showUserMenuModal === true && id !== userMenuModalId) {
-      // 바로 선택한 모달이 열리게
-      setUserMenuModalId(id);
-      return;
-    }
-    setShowUserMenuModal(!showUserMenuModal);
-    setUserMenuModalId(id);
+  const navigate = useNavigate();
+
+  const handleUpdate = () => {
+    navigate(`/book/register/${id}`);
+  };
+
+  const handleDelete = () => {
+    setShowBookDeleteModal(true);
+    setBookDeleteId(id);
   };
 
   return (
@@ -27,11 +26,14 @@ const UserBook = ({ book, id }) => {
       <S.Title>{book.title}</S.Title>
       <S.Author>{book.author}</S.Author>
       <S.Link>{book.link}</S.Link>
-      <S.MenuWrapper onClick={handleUserMenuModal}>
-        <I.MeatballsMenu />
+      <S.MenuWrapper>
+        <I.UpdateIcon onClick={handleUpdate} />
+        <I.DeleteIcon onClick={handleDelete} />
       </S.MenuWrapper>
-      {userMenuModalId === id && showUserMenuModal && <UserMenuModal />}
-      {userMenuModalId === id && showBookDeleteModal && <BookDeleteModal />}
+
+      {bookDeleteId === id && showBookDeleteModal && (
+        <BookDeleteModal title={book.title} id={bookDeleteId} />
+      )}
     </S.UserBookSection>
   );
 };

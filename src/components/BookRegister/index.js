@@ -57,7 +57,7 @@ const BookRegister = () => {
                 있습니다.
               </S.Desc>
             </div>
-            <S.Link href="/mypage">
+            <S.Link href="/user">
               신청현황 <I.Arrow />
             </S.Link>
           </S.TitleSection>

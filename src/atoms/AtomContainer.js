@@ -8,6 +8,9 @@ export const ShowBookDeleteModal = atom({
   default: false,
 });
 
+/**
+ * 삭제하려고 하는 책의 id
+ */
 export const BookDeleteId = atom({
   key: 'BookDeleteId',
   default: null,

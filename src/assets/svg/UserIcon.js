@@ -1,5 +1,6 @@
-const UserIcon = () => (
+const UserIcon = ({ onClick }) => (
   <svg
+    onClick={onClick}
     width="34"
     height="34"
     viewBox="0 0 34 34"

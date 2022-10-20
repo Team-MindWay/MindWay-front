@@ -3,7 +3,7 @@ import * as S from './style';
 import { css } from '@emotion/react';
 import { shake } from 'shared/Animation';
 
-const Input = ({ bigwidth = false, placeholder, register, error }) => {
+const Input = ({ bigwidth = false, error, register, ...rest }) => {
   const errorAnimation = () =>
     css({
       animation: `${shake} 0.3s`,
@@ -11,7 +11,7 @@ const Input = ({ bigwidth = false, placeholder, register, error }) => {
   return (
     <>
       <S.Input
-        placeholder={placeholder}
+        {...rest}
         {...register}
         css={css`
           width: ${bigwidth ? '528px' : '400px'};

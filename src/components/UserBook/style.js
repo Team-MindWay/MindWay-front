@@ -27,4 +27,5 @@ export const Link = styled.p`
 
 export const MenuWrapper = styled.div`
   cursor: pointer;
+  display: flex;
 `;

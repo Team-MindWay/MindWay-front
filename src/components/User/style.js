@@ -66,7 +66,7 @@ export const HeaderTitle = styled.p`
 `;
 
 export const UserBookSection = styled.div`
-  padding: 60px;
+  padding: 60px 0 0 60px;
   height: 450px;
   overflow: scroll;
 `;

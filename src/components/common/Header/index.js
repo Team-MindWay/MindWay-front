@@ -1,11 +1,12 @@
 import * as S from './style';
 import * as I from 'assets/svg';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 
 const Header = () => {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const select = path =>
     pathname === path && css({ borderBottom: '2px solid #aad1a0' });
 
@@ -24,7 +25,7 @@ const Header = () => {
         </S.NavContent>
       </S.NavBox>
       <S.IconWrapper>
-        <I.UserIcon />
+        <I.UserIcon onClick={() => navigate('/user')} />
       </S.IconWrapper>
     </S.Header>
   );

@@ -32,4 +32,7 @@ export const IconWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 197px;
+  svg {
+    cursor: pointer;
+  }
 `;

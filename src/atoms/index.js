@@ -1,5 +1,1 @@
-export {
-  UserMenuModalId,
-  ShowUserMenuModal,
-  ShowBookDeleteModal,
-} from './AtomContainer';
+export { ShowBookDeleteModal, BookDeleteId } from './AtomContainer';

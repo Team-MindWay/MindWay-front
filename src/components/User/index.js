@@ -4,13 +4,13 @@ import * as S from './style';
 const User = () => {
   const Books = [
     {
-      title: '세상의 마지막 기차역',
-      author: '무라세 다케시',
+      title: '용의자 X의 헌신',
+      author: '히가시노 게이고',
       link: 'http://www.yes24.com/Product/Goods/109308932',
     },
     {
-      title: '세상의 마지막 기차역',
-      author: '무라세 다케시',
+      title: '데미안',
+      author: '헤르만 헤세',
       link: 'http://www.yes24.com/Product/Goods/109308932',
     },
 
@@ -69,6 +69,7 @@ const User = () => {
             ))}
           </S.UserBookSection>
         </S.BookInfosection>
+        <S.BottomLine />
       </S.UserSection>
     </>
   );

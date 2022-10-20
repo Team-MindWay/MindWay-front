@@ -47,7 +47,7 @@ export const BookInfosection = styled.div`
 
 export const BookInfoHeader = styled.div`
   padding: 0 60px;
-  box-shadow: -8px 20px 20px -20px rgba(121, 121, 121, 0.25);
+  box-shadow: 0px 20px 20px -20px rgba(121, 121, 121, 0.25);
   display: flex;
 `;
 
@@ -66,7 +66,14 @@ export const HeaderTitle = styled.p`
 `;
 
 export const UserBookSection = styled.div`
-  padding: 60px;
+  padding: 30px 0 0 60px;
   height: 450px;
   overflow: scroll;
+`;
+
+export const BottomLine = styled.div`
+  box-shadow: 0px -20px 20px -16px rgb(121 121 121 / 25%);
+  height: 40px;
+  width: 100%;
+  background-color: #ffffff;
 `;

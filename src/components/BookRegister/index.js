@@ -57,7 +57,7 @@ const BookRegister = () => {
                 있습니다.
               </S.Desc>
             </div>
-            <S.Link href="/mypage">
+            <S.Link href="/user">
               신청현황 <I.Arrow />
             </S.Link>
           </S.TitleSection>
@@ -77,6 +77,7 @@ const BookRegister = () => {
               <div>
                 <S.FormTitle>저자</S.FormTitle>
                 <Input
+                  title="저자"
                   bigwidth={true}
                   placeholder="저자를 입력해주세요."
                   register={register('author', {

@@ -69,6 +69,7 @@ const User = () => {
             ))}
           </S.UserBookSection>
         </S.BookInfosection>
+        <S.BottomLine />
       </S.UserSection>
     </>
   );

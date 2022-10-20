@@ -2,7 +2,9 @@ import styled from '@emotion/styled';
 
 export const UserBookSection = styled.div`
   display: flex;
-  margin-bottom: 40px;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Title = styled.p`
@@ -19,7 +21,7 @@ export const Author = styled.p`
 `;
 
 export const Link = styled.p`
-  width: 440px;
+  width: 400px;
   font-weight: 400;
   font-size: 18px;
   color: #8f8f8f;
@@ -28,4 +30,6 @@ export const Link = styled.p`
 export const MenuWrapper = styled.div`
   cursor: pointer;
   display: flex;
+  width: 72px;
+  justify-content: space-between;
 `;

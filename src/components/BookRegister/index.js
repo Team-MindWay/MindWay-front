@@ -15,7 +15,7 @@ const BookRegister = () => {
   } = useForm();
 
   const handleUpdate = () => {
-    console.log('두서 수정 api 호출');
+    console.log('도서 수정 api 호출');
   };
 
   const handleRegister = () => {

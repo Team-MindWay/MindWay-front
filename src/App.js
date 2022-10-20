@@ -6,6 +6,8 @@ const App = () => {
     <Routes>
       <Route path="/" element={<P.MainPage />} />
       <Route path="/book/register" element={<P.BookRegisterPage />} />
+      <Route path="/book/register/:id" element={<P.BookRegisterPage />} />
+      <Route path="/user" element={<P.UserPage />} />
     </Routes>
   );
 };

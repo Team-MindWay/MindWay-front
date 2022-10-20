@@ -17,6 +17,13 @@ export const Input = styled.input`
   &:focus {
     border: 2px solid #6f8e67;
   }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+  }
 `;
 
 export const ErrorMessage = styled.p`

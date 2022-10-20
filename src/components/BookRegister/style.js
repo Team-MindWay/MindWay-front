@@ -25,7 +25,7 @@ export const Desc = styled.p`
 export const Link = styled.a`
   width: 160px;
   height: 44px;
-  background-color-color: #ffffff;
+  background-color: #ffffff;
   border: 2px solid #618259;
   border-radius: 50px;
 
@@ -57,12 +57,12 @@ export const FormTitle = styled.h1`
 
   &::after {
     display: inline-block;
-    background-color-size: 10px 10px;
+    background-size: 10px 10px;
     width: 20px;
     height: 20px;
     content: '';
     position: absolute;
-    background-color-color: #6e8f66;
+    background-color: #6e8f66;
     border-radius: 50%;
     left: -79px;
   }
@@ -79,7 +79,7 @@ export const RegisterButton = styled.button`
   margin-left: auto;
   width: 160px;
   height: 44px;
-  background-color-color: #ffffff;
+  background-color: #ffffff;
   border: 2px solid #aad1a0;
   border-radius: 50px;
   font-size: 18px;

@@ -1,4 +1,8 @@
 import { Header, UserBook } from 'components';
+import { useEffect, useState } from 'react';
+import { profileColor } from 'shared/ProfileColor';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import * as S from './style';
 
 const User = () => {
@@ -44,12 +48,24 @@ const User = () => {
     },
   ];
 
+  const [background, setBackground] = useState();
+
+  useEffect(() => {
+    const randomColor = profileColor[Math.floor(Math.random() * 4)];
+    console.log(randomColor);
+    setBackground(randomColor);
+  }, []);
+
   return (
     <>
       <Header />
       <S.UserSection>
         <S.ProfileSection>
-          <S.Profile />
+          <S.Profile
+            css={css`
+              background: linear-gradient(${background});
+            `}
+          />
           <S.UserInfoSection>
             <S.StudentId>2409</S.StudentId>
             <S.Name>양세련</S.Name>

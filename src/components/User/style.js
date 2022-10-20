@@ -14,7 +14,6 @@ export const ProfileSection = styled.div`
 export const Profile = styled.div`
   width: 200px;
   height: 200px;
-  background: linear-gradient(46.72deg, #aad1a0 14.8%, #f5f5f5 85.49%);
   border-radius: 50%;
 `;
 

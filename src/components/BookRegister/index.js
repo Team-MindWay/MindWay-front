@@ -1,6 +1,6 @@
 import * as S from './style';
 import * as I from 'assets/svg';
-import { Header, Title, Input } from 'components';
+import { Header, Title, Input, LinkButton } from 'components';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -57,9 +57,9 @@ const BookRegister = () => {
                 있습니다.
               </S.Desc>
             </div>
-            <S.Link href="/user">
-              신청현황 <I.Arrow />
-            </S.Link>
+            <LinkButton link="/book/list" arrow="right">
+              신청현황
+            </LinkButton>
           </S.TitleSection>
           <S.Form onSubmit={handleSubmit(handleSubmitData, handleError)}>
             <S.InputSection>

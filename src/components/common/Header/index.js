@@ -17,7 +17,10 @@ const Header = () => {
         <S.NavContent href="/" css={select('/')}>
           메인
         </S.NavContent>
-        <S.NavContent href="/book/register" css={select('/book/register')}>
+        <S.NavContent
+          href="/book/register"
+          css={select('/book/register') || select('/book/list')}
+        >
           도서신청
         </S.NavContent>
         <S.NavContent href="/about" css={select('/about')}>

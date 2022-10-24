@@ -22,8 +22,6 @@ export const Desc = styled.p`
   font-size: 12px;
 `;
 
-
-
 export const Form = styled.form`
   height: 700px;
   display: flex;

@@ -16,10 +16,10 @@ const MainTitle = styled.h1`
 
 const Title = ({ main, sub }) => {
   return (
-    <>
+    <div>
       <SubTitle>{sub}</SubTitle>
       <MainTitle>{main}</MainTitle>
-    </>
+    </div>
   );
 };
 

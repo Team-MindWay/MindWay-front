@@ -63,7 +63,7 @@ const BookList = () => {
             신청하기
           </LinkButton>
         </S.TitleSection>
-        <S.BookInfosection>
+        <div>
           <S.BookInfoHeader>
             <S.HeaderTitle>순번</S.HeaderTitle>
             <S.HeaderTitle>책 제목</S.HeaderTitle>
@@ -75,8 +75,8 @@ const BookList = () => {
               <BookInfo book={book} key={i} id={i} />
             ))}
           </S.BookList>
-        </S.BookInfosection>
-        <S.BottomLine />
+          <S.BottomLine />
+        </div>
       </S.BookListSection>
     </>
   );

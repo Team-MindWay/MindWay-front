@@ -12,8 +12,6 @@ export const TitleSection = styled.div`
   padding-left: 35px;
 `;
 
-export const BookInfosection = styled.div``;
-
 export const BookInfoHeader = styled.div`
   box-shadow: 0px 20px 20px -20px rgba(121, 121, 121, 0.25);
   display: flex;

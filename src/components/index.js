@@ -8,3 +8,4 @@ export { default as UserBook } from './UserBook';
 export { default as BookDeleteModal } from './modal/BookDeleteModal';
 export { default as BookList } from './BookList';
 export { default as LinkButton } from './LinkButton';
+export { default as BookInfo } from './BookInfo';

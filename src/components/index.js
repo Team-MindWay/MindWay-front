@@ -15,3 +15,4 @@ export { default as UserPage } from './UserPage';
 
 // modals
 export { default as BookDeleteModal } from './modal/BookDeleteModal';
+export { default as EventModal } from './modal/EventModal';

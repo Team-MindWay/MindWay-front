@@ -1,6 +1,5 @@
 import { Header, Event } from 'components';
 import * as S from './style';
-
 const MainPage = () => {
   return (
     <>

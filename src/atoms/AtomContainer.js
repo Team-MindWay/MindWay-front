@@ -15,3 +15,8 @@ export const BookDeleteId = atom({
   key: 'BookDeleteId',
   default: null,
 });
+
+export const ShowEventModal = atom({
+  key: 'ShowEventModal',
+  default: false,
+});

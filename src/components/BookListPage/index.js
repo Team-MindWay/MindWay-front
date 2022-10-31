@@ -1,7 +1,7 @@
 import { Header, LinkButton, Title, BookInfo } from 'components';
 import * as S from './style';
 
-const BookList = () => {
+const BookListPage = () => {
   const Books = [
     {
       title: '용의자 X의 헌신',
@@ -82,4 +82,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default BookListPage;

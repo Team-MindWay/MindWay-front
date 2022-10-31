@@ -1,4 +1,4 @@
-export { default as BookRegisterPage } from './book/RegisterPage';
-export { default as MainPage } from './MainPage';
-export { default as UserPage } from './UserPage';
-export { default as BookListPage } from './book/ListPage';
+export { default as BookRegister } from './book/register';
+export { default as BookList } from './book/list';
+export { default as Main } from './main';
+export { default as User } from './user';

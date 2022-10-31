@@ -1,9 +1,9 @@
-import { Main } from 'components';
+import { Header } from 'components';
 
 const MainPage = () => {
   return (
     <>
-      <Main />
+      <Header />
     </>
   );
 };

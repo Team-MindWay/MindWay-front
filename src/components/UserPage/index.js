@@ -1,7 +1,7 @@
 import { Header, UserBook } from 'components';
 import * as S from './style';
 
-const User = () => {
+const UserPage = () => {
   const Books = [
     {
       title: '용의자 X의 헌신',
@@ -75,4 +75,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserPage;

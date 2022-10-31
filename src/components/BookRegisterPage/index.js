@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const BookRegister = () => {
+const BookRegisterPage = () => {
   const { id } = useParams();
   const {
     register,
@@ -106,4 +106,4 @@ const BookRegister = () => {
   );
 };
 
-export default BookRegister;
+export default BookRegisterPage;

@@ -1,5 +1,16 @@
 import styled from '@emotion/styled';
 
+export const EventWrapper = styled.div`
+  display: flex;
+  gap: 150px;
+
+  hr {
+    border: none;
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px rgba(121, 121, 121, 0.25);
+  }
+`;
+
 export const Event = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,7 +23,7 @@ export const Event = styled.div`
   border-radius: 20px;
   margin-top: 80px;
   cursor: pointer;
-  img {
+  .EventImage {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     width: 100%;

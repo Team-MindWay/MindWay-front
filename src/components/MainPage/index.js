@@ -1,4 +1,4 @@
-import { Header, Event } from 'components';
+import { Header, Event, NightLibrary } from 'components';
 import * as S from './style';
 const MainPage = () => {
   return (
@@ -6,6 +6,7 @@ const MainPage = () => {
       <Header />
       <S.MainPage>
         <Event />
+        <NightLibrary />
       </S.MainPage>
     </>
   );

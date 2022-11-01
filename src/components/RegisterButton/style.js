@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const RegisterButton = styled.button`
   display: block;
   margin-left: auto;
+  margin-top: auto;
   width: 160px;
   height: 44px;
   background-color: #ffffff;

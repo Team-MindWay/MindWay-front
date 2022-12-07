@@ -12,6 +12,7 @@ export { default as BookListPage } from './BookListPage';
 export { default as BookRegisterPage } from './BookRegisterPage';
 export { default as MainPage } from './MainPage';
 export { default as UserPage } from './UserPage';
+export { default as SignUpPage } from './SignUpPage';
 
 // modals
 export { default as BookDeleteModal } from './modal/BookDeleteModal';

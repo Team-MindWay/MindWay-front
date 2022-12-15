@@ -31,8 +31,14 @@ export const FormInput = styled.input`
   border-bottom: 1px solid #aad1a0;
   outline: none;
   height: 34px;
-  width: 225px;
+  width: 150px;
   border-radius: 2px;
+`;
+
+export const SelectSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 export const Select = styled.select`
@@ -46,4 +52,31 @@ export const Select = styled.select`
   border: none;
   border-bottom: 1px solid #aad1a0;
   outline: none;
+`;
+
+export const ButtonWrapper = styled.div`
+  cursor: pointer;
+`;
+
+export const MemberSection = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+export const Member = styled.div`
+  position: relative;
+  margin-top: 20px;
+  width: 245px;
+  height: 60px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 60px;
+`;
+
+export const DeleteButtonWrapper = styled.div`
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  cursor: pointer;
 `;

@@ -59,7 +59,7 @@ const NightLibrary = () => {
           </S.RegisterButton>
         </S.ButtonSection>
       </div>
-      {<NightLibraryForm />}
+      {place && <NightLibraryForm />}
     </>
   );
 };

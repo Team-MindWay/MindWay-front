@@ -10,16 +10,16 @@ const DeleteMemberButton = () => (
     <path
       d="M13.3334 6.6665L6.66675 13.3332"
       stroke="#F4F4F4"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M6.66659 6.6665L13.3333 13.3332"
       stroke="#F4F4F4"
-      stroke-width="1.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

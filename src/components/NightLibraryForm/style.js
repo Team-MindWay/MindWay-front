@@ -54,7 +54,9 @@ export const Select = styled.select`
   outline: none;
 `;
 
-export const ButtonWrapper = styled.button``;
+export const ButtonWrapper = styled.button`
+  background: none;
+`;
 
 export const MemberSection = styled.div`
   display: grid;

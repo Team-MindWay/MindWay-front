@@ -12,44 +12,61 @@ const NightLibraryForm = () => {
     watch,
     setValue,
     formState: { errors },
+    handleSubmit,
   } = useForm();
   const [members, setMembers] = useState([]);
 
-  const addMember = e => {
-    e.preventDefault();
+  const deleteMember = index => {
+    setMembers(members.filter((v, i) => index !== i));
+  };
+
+  const handleSubmitData = data => {
+    console.log(data);
     if (watch('number').length === 1) {
       setValue('number', 0 + watch('number'));
     }
 
     const 학번 =
       watch('grade') + watch('class') + watch('number') + ' ' + watch('name');
-    setMembers(members.concat(학번));
     setValue('grade', '선택');
     setValue('class', '선택');
     setValue('number', '선택');
     setValue('name', '');
+    setMembers(members.concat(학번));
   };
 
-  const deleteMember = index => {
-    setMembers(members.filter((v, i) => index !== i));
+  const handleError = errors => {
+    console.log(errors);
   };
+
+  const registerNightLibrary = () => {
+    console.log('자습신청 api');
+  };
+
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSubmit(handleSubmitData, handleError)}>
       <div>
         <S.FormTitle>팀 이름</S.FormTitle>
         <S.FormInput
+          {...register('team', { required: true })}
           css={css`
             margin-bottom: 50px;
           `}
           placeholder="팀 이름을 입력하세요."
-          {...register('team', { required: true })}
         />
       </div>
       <div>
         <S.FormTitle>팀원 학번</S.FormTitle>
         <S.SelectSection>
-          <S.Select {...register('grade', { required: true })}>
-            <option value={null}>선택</option>
+          <S.Select
+            {...register('grade', {
+              required: true,
+              validate: {
+                unSelected: value => value !== '선택',
+              },
+            })}
+          >
+            <option>선택</option>
             {[...Array(3)].map((_, i) => (
               <option key={i} value={i + 1}>
                 {i + 1}
@@ -57,7 +74,14 @@ const NightLibraryForm = () => {
             ))}
           </S.Select>
           학년
-          <S.Select {...register('class', { required: true })}>
+          <S.Select
+            {...register('class', {
+              required: true,
+              validate: {
+                unSelected: value => value !== '선택',
+              },
+            })}
+          >
             <option>선택</option>
             {[...Array(4)].map((_, i) => (
               <option key={i} value={i + 1}>
@@ -66,7 +90,14 @@ const NightLibraryForm = () => {
             ))}
           </S.Select>
           반
-          <S.Select {...register('number', { required: true })}>
+          <S.Select
+            {...register('number', {
+              required: true,
+              validate: {
+                unSelected: value => value !== '선택',
+              },
+            })}
+          >
             <option>선택</option>
             {[...Array(20)].map((_, i) => (
               <option key={i} value={i + 1}>
@@ -76,10 +107,10 @@ const NightLibraryForm = () => {
           </S.Select>
           번
           <S.FormInput
-            placeholder="이름을 입력하세요."
             {...register('name', { required: true })}
+            placeholder="이름을 입력하세요."
           />
-          <S.ButtonWrapper onClick={addMember}>
+          <S.ButtonWrapper>
             <I.RegisterButton />
           </S.ButtonWrapper>
         </S.SelectSection>
@@ -95,7 +126,9 @@ const NightLibraryForm = () => {
         </S.MemberSection>
       </div>
 
-      <RegisterButton>신청하기</RegisterButton>
+      <RegisterButton type="button" onClick={registerNightLibrary}>
+        신청하기
+      </RegisterButton>
     </S.Form>
   );
 };

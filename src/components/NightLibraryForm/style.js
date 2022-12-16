@@ -56,6 +56,8 @@ export const Select = styled.select`
 
 export const ButtonWrapper = styled.button`
   background: none;
+  border: none;
+  cursor: pointer;
 `;
 
 export const MemberSection = styled.div`

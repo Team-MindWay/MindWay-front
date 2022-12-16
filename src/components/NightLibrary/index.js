@@ -14,7 +14,7 @@ const NightLibrary = () => {
       {
         id: '1',
         team: 'MindWay',
-        room: '온라인 강의실',
+        room: '스터디 카페',
         member: ['2300 주현호', '2100 백혜인', '2100 유시온'],
       },
     ]);
@@ -59,7 +59,7 @@ const NightLibrary = () => {
           </S.RegisterButton>
         </S.ButtonSection>
       </div>
-      {place && <NightLibraryForm />}
+      {place && <NightLibraryForm place={place} />}
     </>
   );
 };

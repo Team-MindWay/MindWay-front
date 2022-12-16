@@ -3,10 +3,10 @@ import { css } from '@emotion/react';
 import RegisterButton from 'components/RegisterButton';
 import * as S from './style';
 import * as I from 'assets/svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-const NightLibraryForm = () => {
+const NightLibraryForm = ({ place }) => {
   const {
     register,
     watch,
@@ -40,8 +40,13 @@ const NightLibraryForm = () => {
   };
 
   const registerNightLibrary = () => {
-    console.log('자습신청 api');
+    members.length >= 1 && console.log('자습신청 api');
   };
+
+  useEffect(() => {
+    console.log(place);
+    console.log('자습 현황 보기 api 요청');
+  }, []);
 
   return (
     <S.Form onSubmit={handleSubmit(handleSubmitData, handleError)}>
@@ -51,6 +56,7 @@ const NightLibraryForm = () => {
           {...register('team', { required: true })}
           css={css`
             margin-bottom: 50px;
+            border-bottom: ${errors.team && ' 2px solid #E53A3A;'};
           `}
           placeholder="팀 이름을 입력하세요."
         />
@@ -109,6 +115,9 @@ const NightLibraryForm = () => {
           <S.FormInput
             {...register('name', { required: true })}
             placeholder="이름을 입력하세요."
+            css={css`
+              border-bottom: ${errors.name && ' 2px solid #E53A3A;'};
+            `}
           />
           <S.ButtonWrapper>
             <I.RegisterButton />

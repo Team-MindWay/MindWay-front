@@ -1,1 +1,5 @@
-export { ShowBookDeleteModal, BookDeleteId } from './AtomContainer';
+export {
+  ShowBookDeleteModal,
+  BookDeleteId,
+  ShowEventModal,
+} from './AtomContainer';

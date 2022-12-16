@@ -60,26 +60,6 @@ export const ErrorMessage = styled.p`
   font-size: 12px;
 `;
 
-export const RegisterButton = styled.button`
-  display: block;
-  margin-left: auto;
-  width: 160px;
-  height: 44px;
-  background-color: #ffffff;
-  border: 2px solid #aad1a0;
-  border-radius: 50px;
-  font-size: 18px;
-  color: #6e8f66;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #6e8f66;
-    border: 2px solid #6e8f66;
-    border-radius: 50px;
-    color: #ffffff;
-  }
-`;
-
 export const Line = styled.div`
   position: absolute;
   top: 0;

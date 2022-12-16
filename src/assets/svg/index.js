@@ -5,3 +5,5 @@ export { default as MeatballsMenu } from './MeatballsMenu';
 export { default as UpdateIcon } from './UpdateIcon';
 export { default as DeleteIcon } from './DeleteIcon';
 export { default as LeftArrow } from './LeftArrow';
+export { default as RegisterButton } from './RegisterButton';
+export { default as DeleteMemberButton } from './DeleteMemberButton';

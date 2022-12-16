@@ -6,6 +6,9 @@ export { default as UserBook } from './UserBook';
 export { default as LinkButton } from './LinkButton';
 export { default as BookInfo } from './BookInfo';
 export { default as Event } from './Event';
+export { default as NightLibrary } from './NightLibrary';
+export { default as NightLibraryForm } from './NightLibraryForm';
+export { default as RegisterButton } from './RegisterButton';
 
 // pages
 export { default as BookListPage } from './BookListPage';
@@ -15,3 +18,4 @@ export { default as UserPage } from './UserPage';
 
 // modals
 export { default as BookDeleteModal } from './modal/BookDeleteModal';
+export { default as EventModal } from './modal/EventModal';

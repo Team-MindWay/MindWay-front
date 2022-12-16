@@ -1,6 +1,5 @@
 import * as S from './style';
-import * as I from 'assets/svg';
-import { Header, Title, Input, LinkButton } from 'components';
+import { Header, Title, Input, LinkButton, RegisterButton } from 'components';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -97,7 +96,7 @@ const BookRegisterPage = () => {
                 />
               </div>
             </S.InputSection>
-            <S.RegisterButton> {id ? '수정하기' : '신청하기'}</S.RegisterButton>
+            <RegisterButton>{id ? '수정하기' : '신청하기'}</RegisterButton>
           </S.Form>
         </S.RegisterSection>
         <S.Line />
